@@ -29,4 +29,23 @@ it should use today’s date to get the month and year.
 
 import sys
 import calendar
-from datetime import datetime
+from datetime import datetime, date
+
+date = str(datetime.today())
+
+thisMonth = date[5:7]
+thisYear = date[0:4]
+thisDay = date[9:11]
+
+if(len(sys.argv) == 3):
+  global month
+  global year
+  month = sys.argv[2]
+  year = sys.argv[1]
+  print(calendar.monthcalendar(int(month), int(year)))
+elif(len(sys.argv) == 2):
+  month = sys.argv[1]
+  year = 2020
+  print(calendar.monthcalendar(int(year), int(month)))
+elif(len(sys.argv) == 1):
+  print("Pleae make sure to specify at least the number month after the file. You may also add the four digit year after the month. Here is the current month of this year.\n", calendar.monthcalendar(int(thisYear), int(thisMonth)))
