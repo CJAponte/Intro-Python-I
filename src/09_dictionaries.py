@@ -13,7 +13,7 @@ has the following keys:
  - lat: a signed integer representing a latitude value
  - lon: a signed integer representing a longitude value
  - name: a name string for this location
-""""
+"""
  
 waypoints = [
     {
@@ -35,6 +35,7 @@ waypoints = [
 
 # Add a new waypoint to the list
 # YOUR CODE HERE
+waypoints.append({"lat" : 24, "lon": -53, "name": "McDonolds"})
 
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
@@ -43,5 +44,12 @@ waypoints = [
 
 # YOUR CODE HERE
 
+waypoints[0] = {"lat": 43, "lon": -130, "name": "not a real place"}
+
+
+
 # Write a loop that prints out all the field values for all the waypoints
+
+for i in waypoints:
+    print(i.items())
 # YOUR CODE HERE
