@@ -13,8 +13,8 @@ has the following keys:
  - lat: a signed integer representing a latitude value
  - lon: a signed integer representing a longitude value
  - name: a name string for this location
-"""
-
+""""
+ 
 waypoints = [
     {
         "lat": 43,
